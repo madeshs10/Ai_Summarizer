@@ -1,0 +1,342 @@
+.main {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-left: 1.5rem;   /* px-6 */
+  padding-right: 1.5rem;
+  padding-top: 120px;     /* pt-[120px] */
+  padding-bottom: 160px;  /* pb-[160px] */
+  pointer-events: none;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, #fafafa 100%);
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.4;
+  background-image: url("/src/assets/grid.svg");
+  filter: invert(1);
+}
+
+.gradient{
+    background-image:
+    radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  filter: blur(100px) saturate(150%);
+  opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Converted Tailwind Utility Classes to Plain CSS */
+
+.app {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80rem; /* 1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;  /* px-6 */
+  padding-right: 1.5rem;
+}
+@media (min-width: 640px) {
+  .app {
+    padding-left: 4rem;  /* sm:px-16 */
+    padding-right: 4rem;
+  }
+}
+
+.black_btn {
+  border-radius: 9999px;
+  border: 1px solid black;
+  background-color: black;
+  padding: 0.375rem 1.25rem; /* py-1.5 px-5 */
+  font-size: 0.875rem; /* text-sm */
+  color: white;
+  transition: all 0.3s;
+}
+.black_btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.head_text {
+  margin-top: 1.25rem; /* mt-5 */
+  font-size: 3rem; /* text-5xl */
+  font-weight: 800; /* extrabold */
+  line-height: 1.15;
+  color: black;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .head_text {
+    font-size: 3.75rem; /* sm:text-6xl */
+  }
+}
+
+.orange_gradient {
+  background-image: linear-gradient(to right, #f59e0b, #ea580c, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  margin-top: 1.25rem; /* mt-5 */
+  font-size: 1.125rem; /* text-lg */
+  color: #4b5563; /* text-gray-600 */
+  text-align: center;
+  max-width: 42rem; /* max-w-2xl */
+}
+@media (min-width: 640px) {
+  .desc {
+    font-size: 1.25rem; /* sm:text-xl */
+  }
+}
+
+.url_input {
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem; /* rounded-md */
+  border: 1px solid #e5e7eb; /* border-gray-200 */
+  background-color: white;
+  padding: 0.625rem 3rem 0.625rem 2.5rem; /* py-2.5 pr-12 pl-10 */
+  font-size: 0.875rem; /* text-sm */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  outline: none;
+}
+.url_input:focus {
+  border-color: black;
+  box-shadow: none;
+}
+
+.submit_btn {
+  position: absolute;
+  top: 0.375rem;
+  bottom: 0.375rem;
+  right: 0.375rem;
+  display: flex;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #9ca3af;
+  transition: all 0.3s;
+}
+.submit_btn:hover {
+  color: #374151; /* text-gray-700 */
+  border-color: #374151;
+}
+
+.link_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.copy_btn {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2);
+  cursor: pointer;
+}
+
+.blue_gradient {
+  font-weight: 900;
+  background-image: linear-gradient(to right, #2563eb, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.summary_box {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.5rem; /* mb-10 = 40px */
+  padding-top: 0.75rem;   /* pt-3 = 12px */
+}
+
+.logo-image {
+    width: 7rem; /* Equivalent to w-28 (28 * 0.25rem) */
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .br-class {
+    display: none;
+  }
+}
+
+.section {
+  margin-top: 4rem;
+  width: 100%;
+  max-width: 36rem;
+}
+
+.search {
+  display: flex;           /* flex */
+  flex-direction: column;  /* flex-col */
+  width: 100%;             /* w-full */
+  gap: 0.5rem;             /* gap-2 = 2 * 0.25rem = 0.5rem */
+}
+
+.form {
+  position: relative;       /* relative */
+  display: flex;            /* flex */
+  justify-content: center;  /* justify-center */
+  align-items: center;      /* items-center */
+}
+
+.demo-img {
+  position: absolute;   /* absolute */
+  left: 0;              /* left-0 */
+  margin-top: 0.5rem;   /* my-2 → top and bottom margin */
+  margin-bottom: 0.5rem;
+  margin-left: 0.75rem; /* ml-3 */
+  width: 1.25rem;       /* w-5 */
+}
+
+input:invalid:has(+ .error-msg) + .error-msg {
+  color: red;
+}
+
+.peer:focus + .submit_btn {
+  border-color: #374151; /* Tailwind gray-700 */
+  color: #374151; /* Tailwind gray-700 */
+}
+
+.browse-url-history{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;       /* gap-1 = 4px = 0.25rem */
+  max-height: 15rem;  /* max-h-60 = 240px = 15rem */
+  overflow-y: auto;
+}
+
+.browse-url-history-img{
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+}
+
+.url-links{
+  flex: 1;
+  font-family: 'Satoshi', sans-serif; /* Make sure to import 'Satoshi' if used */
+  color: #1d4ed8; /* Tailwind blue-700 */
+  font-weight: 500; /* Medium */
+  font-size: 0.875rem; /* Tailwind text-sm = 14px */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.display-results{
+  margin-top: 2.5rem;     /* my-10 = 40px top */
+  margin-bottom: 2.5rem;  /* my-10 = 40px bottom */
+  max-width: 100%;        /* max-w-full */
+  display: flex;          /* flex */
+  justify-content: center;/* justify-center */
+  align-items: center;
+}
+
+.loader-img{
+  width: 5rem;            /* w-20 = 80px */
+  height: 5rem;           /* h-20 = 80px */
+  object-fit: contain;
+}
+
+.error-text{
+  font-family: 'Inter', sans-serif; /* font-inter */
+  font-weight: bold;                /* font-bold */
+  color: #000000;                   /* text-black */
+  text-align: center; 
+}
+
+.error-data{
+  font-family: 'Satoshi', sans-serif; /* font-satoshi */
+  font-weight: 400;                   /* font-normal */
+  color: #374151;
+}
+
+.summary-top{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* gap-3 = 12px */
+}
+
+.article-name{
+  font-family: 'Satoshi', sans-serif; /* font-satoshi */
+  font-weight: 700;                   /* font-bold */
+  color: #4B5563;                     /* text-gray-600 */
+  font-size: 1.25rem; 
+}
+
+.summary-text{
+  font-family: 'Inter', sans-serif; /* font-inter */
+  font-weight: 500;                 /* font-medium */
+  font-size: 0.875rem;              /* text-sm */
+  color: #374151;                   /* text-gray-700 */
+}
